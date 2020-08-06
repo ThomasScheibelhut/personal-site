@@ -1,5 +1,6 @@
 {
-  "name": "personal_site",
+  "name": "tommyscheibelhut",
+  "homepage": "https://tommyscheibelhut.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

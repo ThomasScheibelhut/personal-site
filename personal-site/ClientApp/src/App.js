@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router';
-import { Layout } from './components/Layout';
-import { Home } from './components/Home';
-import { FetchData } from './components/FetchData';
-import { Counter } from './components/Counter';
-
+import Grid from '@material-ui/core/Grid';
 import './custom.css'
+import { Projects } from './components/Projects';
+import { About } from './components/About';
+import { MenuBar } from './components/MenuBar';
+import { Home } from './components/Home';
 
 export default class App extends Component {
   static displayName = App.name;
 
   render () {
-    return (
-      <Layout>
-        <Route exact path='/' component={Home} />
-        <Route path='/counter' component={Counter} />
-        <Route path='/fetch-data' component={FetchData} />
-      </Layout>
+      return ( 
+        <Grid container direction="column" justify="flex-start" alignItems="center">
+            <Grid item>
+                <Home />
+            </Grid>
+            <Grid item>
+                <About />
+            </Grid>
+            <Grid item>
+                <Projects />
+            </Grid>
+        </Grid>
     );
   }
 }
