@@ -1,23 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Container from '@material-ui/core/Container';
 
-export class Home extends Component {
+const useStyles = makeStyles({
+    root: {
+        backgroundImage: `url(bridge.jpg)`,
+        width: '100%',
+        height: '50vh',
+    },
+    media: {
+        height: 140,
+    },
+});
 
-  render () {
+export const Home = () => {
+    const classes = useStyles();
+
     return (
-      <div>
-            <h1>Tommy Scheibelhut</h1>
-            <i
-                style={{
-                    borderRadius: "50%",
-                    width: 500,
-                    height: 500,
-                    display: "block",
-                    background: `url(me.jpg)`,
-                    backgroundPosition: "center",
-                    backgroundSize: "auto 80px"
-                }}
-            />
-      </div>
+        <React.Fragment>
+            <CssBaseline />
+            <Container maxWidth="lg" className={classes.root} >
+                    <h1>Hello</h1>
+            </Container>
+        </React.Fragment>
     );
-  }
 }
