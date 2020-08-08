@@ -1,14 +1,22 @@
-﻿import React, { Component } from 'react';
+﻿import React from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ProjectCard } from './ProjectCard';
+import Grid from '@material-ui/core/Grid';
 
-export class Projects extends Component {
 
-    render() {
-        return (
-            <div>
-                <h1>1</h1>
-                <h1>2</h1>
-                <h1>3</h1>
-            </div>
-        );
-    }
+export const Projects = () => {
+    return (
+        <React.Fragment>
+            <CssBaseline />
+            <ProjectCard
+                title="DND"
+            />
+            <ProjectCard
+                title="CAMP"
+            />
+            <ProjectCard
+                title="STORE"
+            />
+        </React.Fragment>
+    );
 }

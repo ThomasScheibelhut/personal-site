@@ -1,28 +1,41 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
-
-const useStyles = makeStyles({
-    root: {
-        backgroundImage: `url(bridge.jpg)`,
-        width: '100%',
-        height: '50vh',
-    },
-    media: {
-        height: 140,
-    },
-});
+import Grid from '@material-ui/core/Grid';
 
 export const Home = () => {
-    const classes = useStyles();
-
     return (
-        <React.Fragment>
+        <div style={{
+            backgroundImage: 'url(ocean.jpg)',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'noRepeat',
+            position: 'fixed',
+            width: '100%',
+            height: '100%',
+        }} >
             <CssBaseline />
-            <Container maxWidth="lg" className={classes.root} >
-                    <h1>Hello</h1>
-            </Container>
-        </React.Fragment>
+            <Grid
+                container
+                direction="row"
+                justify="center"
+                alignItems="stretch"
+            >
+                <Grid item>
+                    <h1 style={{
+                        color: 'black',
+                        position:'absolute',
+                        margin: '0',
+                        padding: '0',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        FontFamily: 'Cinzel, serif',
+                        WhiteSpace: 'nowrap',
+                    }}>
+                        Welcome To My Site! Check out my Projects
+                    </h1>
+                </Grid>
+            </Grid>
+        </div>
     );
 }
