@@ -5,14 +5,20 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Link } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
+import { IconButton } from '@material-ui/core';
+import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 
 
-const useStyles = makeStyles((theme) => ({ 
+const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
-    },
-    title: {
-        flexGrow: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        '& > *': {
+            margin: theme.spacing(1),
+        },
     },
 }));
 
@@ -29,9 +35,11 @@ export const MenuBar = () => {
                     alignItems="center"
                 >
                     <Grid item>
-                        <Typography variant="h6">
-                                Tommy Scheibelhut
-                        </Typography>
+                        <Link to="/" style={{ textDecoration: "none", color:"white" }}>
+                            <Typography variant="h6">
+                                    Tommy Scheibelhut
+                            </Typography>
+                        </Link>
                     </Grid>
                     <Grid item>
                         <Grid
@@ -41,15 +49,28 @@ export const MenuBar = () => {
                             alignItems="center"
                             spacing={3}
                         >
-                            <Grid item>
-                                <Link to="/">Home</Link>
-                            </Grid>
-                                <Grid item>
-                            <Link to="/about">About</Link>
-                            </Grid>
-                            <Grid item>
-                                <Link to="/projects">Projects</Link>
-                            </Grid>
+                            <div className={classes.root}>
+                                <ButtonGroup size="large" variant="text" color="primary" aria-label="text primary button group">
+                                    <Link to="/">
+                                        <Button>
+                                            Home
+                                        </Button>
+                                    </Link>
+                                    <Link to="/about">
+                                        <Button>
+                                            About
+                                        </Button>
+                                    </Link>
+                                    <Link to="/projects">
+                                        <Button>
+                                            projects
+                                        </Button>
+                                    </Link>
+                                </ButtonGroup>
+                            </div>
+                            <IconButton>
+                                <EmojiObjectsIcon />
+                            </IconButton>
                         </Grid>
                     </Grid>
                 </Grid>
