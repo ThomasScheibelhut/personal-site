@@ -35,14 +35,16 @@ export const Projects = () => {
                             <ProjectCard
                                 title="Bandmate"
                                 description="Bandmate is website designed to get local musicians, bands, and venues togther."
-                                technologies={[{ "name": "React" }, { "name": "C#" }, { "name": "Microsoft SQL Server" }, { "name": "API" }]}
+                                technologies={[{ "name": "React" }, { "name": "C#" }, { "name": "Microsoft SQL Server" }, { "name": ".Net Core" }]}
+                                github={"https://github.com/ThomasScheibelhut/Dungeons-and-Dragons-Assistant"}
                             />
                         </Grid>
                         <Grid item>
                             <ProjectCard
                                 title="DnD Assistant"
                                 description="This application helps to streamline playing Dungeons and Dragons"
-                                technologies={[{ "name": "React" }, { "name": "CSS" }, { "name": "HTML" }, { "name": "API" }]}
+                                technologies={[{ "name": "React" }, { "name": "API" }, { "name": "CSS" }, { "name": "HTML" }]}
+                                github={"https://github.com/ThomasScheibelhut/Bandmate"}
                             />
                         </Grid>
                     </Grid>

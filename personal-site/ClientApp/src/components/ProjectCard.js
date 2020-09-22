@@ -11,8 +11,8 @@ import Modal from '@material-ui/core/Modal';
 import ReactPlayer from 'react-player'
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -43,6 +43,9 @@ function getModalStyle() {
         top: `${top}%`,
         left: `${left}%`,
         transform: `translate(-${top}%, -${left}%)`,
+        width: `51em`,
+        backgroundColor:`whitesmoke`,
+        color:`black`
     };
 }
 
@@ -79,7 +82,7 @@ export const ProjectCard = (props) => {
                         <List component="nav" aria-label="main mailbox folders">
                         {props.technologies && props.technologies.map((technologies) =>
                             <div>
-                                <Divider style={{ backgroundColor: "black" }} />
+                                <Divider style={{ backgroundColor: "darkgray" }} />
                                 <ListItem style={{ fontSize: "150%" }}>{technologies.name}</ListItem >
                             </div>
                             )}
@@ -96,7 +99,10 @@ export const ProjectCard = (props) => {
                 <div style={modalStyle} className={classes.paper}>
                     <h2 id="simple-modal-title">{props.title}</h2>
                     <p id="simple-modal-description">
+                        <br/>
                         <ReactPlayer url='https://www.youtube.com/watch?v=uC7MKLKVC5c' />
+                        <br/>
+                        <a href={props.github} target="_blank">{props.github}</a>
                     </p>
                 </div>
             </Modal>
