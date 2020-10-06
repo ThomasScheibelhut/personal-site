@@ -40,12 +40,7 @@ function getModalStyle() {
     const left = 50;
 
     return {
-        top: `${top}%`,
-        left: `${left}%`,
-        transform: `translate(-${top}%, -${left}%)`,
-        width: `51em`,
-        backgroundColor:`whitesmoke`,
-        color:`black`
+
     };
 }
 
@@ -72,8 +67,8 @@ export const ProjectCard = (props) => {
                     </Typography>
                     <CardMedia
                         className={classes.media}
-                        image="ocean.jpg"
-                        title="Contemplative Reptile"
+                        image={props.image}
+                        title={props.title}
                     />
                     <CardContent>
                         <Typography >
@@ -96,14 +91,41 @@ export const ProjectCard = (props) => {
                 open={open}
                 onClose={handleClose}
             >
-                <div style={modalStyle} className={classes.paper}>
+                <div style={{
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    backgroundColor: "whitesmoke",
+                    color: "black"
+                    }}
+                    className={classes.paper}>
                     <h2 id="simple-modal-title">{props.title}</h2>
-                    <p id="simple-modal-description">
-                        <br/>
-                        <ReactPlayer url='https://www.youtube.com/watch?v=uC7MKLKVC5c' />
-                        <br/>
-                        <a href={props.github} target="_blank">{props.github}</a>
-                    </p>
+                    <div
+                        style={{
+                            position: "relative",
+                            paddingTop: "56.25%",
+                        }}
+                    >
+                        <div
+                            style={{
+                                position: "absolute",
+                                top: "0",
+                                left: "0",
+                                width: "100%",
+                                height: "100%"
+                            }}
+                        >
+                            <ReactPlayer
+                                url={props.demoVideo}
+                                playing={true}
+                                controls={true}
+                                width='100%'
+                                height='100%'
+                            />
+                        </div>
+                    </div>
+                    <br/>
+                    <a href={props.github} target="_blank">{props.github}</a>
                 </div>
             </Modal>
         </div>

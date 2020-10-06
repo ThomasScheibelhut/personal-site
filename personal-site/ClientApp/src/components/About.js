@@ -18,19 +18,18 @@ export const About = () => {
                 alignItems="center"
                 style={{ height: "100%" }}
             >
-                <Paper style={{ padding: "2%", height: "100%", background: "whitesmoke", color:"black" }}>
+                <Paper style={{ paddingDown: "10%",paddingLeft: "10%",paddingRight: "10%",paddingTop: "2%", height: "100%", background: "whitesmoke", color:"black" }}>
                     <h1 style={{ paddingleft: "2%", paddingDown: "2%" }}>About</h1>
-                    <h5 style={{ paddingLeft: "10%", paddingRight: "10%" }}>
+                    <h4 style={{ paddingLeft: "15%", paddingRight: "15%", paddingTop: "2%", paddingBottom: "2%" }}>
                         Hello! I'm a full-stack software developer specializing in React and .Net Core.
                         Check out some of my web applications on the projects page.
                         I also enjoy coding DSP related projects like audio plugins.
                         Feel free to reach out through one of my contacts below!
-                    </h5>
+                    </h4>
                     <Grid
                         container
                         direction="row"
                         justify="space-around"
-                        
                     >
                         <Grid item style={{ height: "100%", width: "20%" }}>
                             <svg viewBox="0 0 128 128" fill="#61DBFB">
@@ -47,11 +46,11 @@ export const About = () => {
                                 <img src='dotnet.png' style={{ width: "100%", height: "100%" }} />
                             </Grid>
                     </Grid>
-                    <div style={{ paddingUp: "5%", paddingDown: "5%" }}>
+                    <div style={{ paddingTop: "5%", paddingBottom: "5%", fontSize:"2em" }}>
                     <div>tgscheibelhut@gmail.com</div>
-                    <a href={`www.linkedin.com/in/tommy-scheibelhut`}>www.linkedin.com/in/tommy-scheibelhut</a>
+                        <a href='https://www.linkedin.com/in/tommy-scheibelhut' target="_blank">LinkedIn</a>
                     <br />
-                        <a href='resume_Scheibelhut.pdf'>my resume</a>
+                        <a href='resume_Scheibelhut.pdf' target="_blank">My Resume</a>
                     </div>
                 </Paper>
             </Grid>

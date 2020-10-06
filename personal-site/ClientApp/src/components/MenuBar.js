@@ -49,17 +49,17 @@ export const MenuBar = () => {
                         >
                             <div className={classes.root}>
                                 <ButtonGroup size="large" variant="text" color="primary" aria-label="text primary button group">
-                                    <Link to="/">
+                                    <Link to="/" style={{ textDecoration: "none" }}>
                                         <Button>
                                             Home
                                         </Button>
                                     </Link>
-                                    <Link to="/about">
+                                    <Link to="/about" style={{ textDecoration: "none" }}>
                                         <Button>
                                             About
                                         </Button>
                                     </Link>
-                                    <Link to="/projects">
+                                    <Link to="/projects" style={{ textDecoration: "none" }}>
                                         <Button>
                                             projects
                                         </Button>
